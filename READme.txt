@@ -1,3 +1,5 @@
+
+
 The c2.sol in contracts contains the contract for  crowdfunding.
 c2.sol contains functions to create a campaign ,to check the number of active campaigns ,the ID of active campaigns.
 Funders is mapped in such  a way that if you enter the campaign id and address of funder it will provide you with the amount funded.
