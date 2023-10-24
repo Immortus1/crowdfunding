@@ -1,28 +1,10 @@
-REMIX DEFAULT WORKSPACE
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
 
-This workspace contains 3 directories:
+CONTRACTS
+The c2.sol in contracts contains the contract for  crowdfunding.
+c2.sol contains functions to create a campaign ,to check the number of active campaigns ,the ID of active campaigns.
+Funders is mapped in such  a way that if you enter the campaign id and address of funder it will provide you with the amount funded.
+c2.sol also contains a function which will provide you the campaign details if you enter the campaign ID.
+c2.sol contains a payable function where funders can fund amount to a campaign only once.
+  
 
-1. 'contracts': Holds four contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
-
-SCRIPTS
-
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
-
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
-
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
-
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
-
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
